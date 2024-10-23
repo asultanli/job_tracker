@@ -1,0 +1,94 @@
+/* styles.css */
+
+/* Define custom color variables */
+:root {
+    --primary-color: #1abc9c;
+    --secondary-color: #2c3e50;
+    --background-color: #2c2c2c;
+    --text-color: #e0e0e0;
+}
+
+/* Apply custom colors */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--secondary-color);
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.btn-primary, .btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-success, .btn-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.card {
+    background-color: #343a40;
+    color: var(--text-color);
+}
+
+.form-control {
+    background-color: #3a3a3a;
+    color: var(--text-color);
+    border-color: #555;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.input-group-text {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: var(--text-color);
+}
+
+.invalid-feedback {
+    color: #ff4d4d;
+}
+
+.alert-info {
+    background-color: #17a2b8;
+    color: #ffffff;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+/* Adjustments for alignment in navbar */
+.navbar-nav .nav-item.d-flex {
+    align-items: center;
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Custom styles for the Logout button */
+.navbar-nav .nav-item form {
+    margin: 0;
+}
+
+.navbar-nav .nav-item form .nav-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Additional styles as needed */

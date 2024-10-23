@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Job Applications{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Your Job Applications</h1>
+    <a class="btn btn-success mb-3" href="{% url 'application_create' %}">
+        <i class="fas fa-plus"></i> Add New Application
+    </a>
+    {% if object_list %}
+    <div class="row">
+        {% for application in object_list %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ application.position }}</h5>
+                    <p class="card-text">{{ application.company }}</p>
+                    <a href="{% url 'application_detail' application.pk %}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="alert alert-info">
+        You have no job applications yet. Click "Add New Application" to get started.
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

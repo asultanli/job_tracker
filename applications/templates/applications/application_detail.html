@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object.position }} at {{ object.company }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">{{ object.position }} at {{ object.company }}</h1>
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item"><strong>Date Applied:</strong> {{ object.date_applied }}</li>
+                <li class="list-group-item"><strong>Status:</strong> {{ object.get_status_display }}</li>
+                <li class="list-group-item"><strong>Notes:</strong> {{ object.notes }}</li>
+            </ul>
+            <a class="btn btn-secondary" href="{% url 'application_update' object.pk %}">Edit</a>
+            <a class="btn btn-danger" href="{% url 'application_delete' object.pk %}">Delete</a>
+            <a class="btn btn-link" href="{% url 'application_list' %}">Back to list</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
