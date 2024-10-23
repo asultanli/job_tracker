@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['asultanli.pythonanywhere.com']
 
 
 # Application definition
@@ -103,7 +103,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-ALLOWED_HOSTS = ['asultanli.pythonanywhere.com']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
